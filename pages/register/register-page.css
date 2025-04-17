@@ -1,0 +1,360 @@
+/* Google fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #0951a3;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    height: 70px;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    position: relative;
+    width: 100%;
+}
+
+/* Navbar MMU Logo */
+.logo-section img {
+    height: 100px;
+    width: auto;
+    margin-left: -90px;
+    margin-top: 5px;
+}
+
+.nav-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    align-items: center;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    transform: scale(1.15);
+    background-color: whitesmoke;
+    color: #0951a3;
+}
+
+.nav-link.active {
+    background-color: whitesmoke;
+    color: #0951a3;
+}
+
+/* Container for the registration form */
+.form-container {
+    margin: 90px auto 30px auto;
+    background-color: white;
+    padding: 30px 60px 20px 60px;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* MMU Logo */
+.form-logo-section img{
+    height: 50px;
+    width: auto;
+    transform: scale(3.5);
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input fields styles */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #3498db;
+    border-width: 2px;
+}
+
+/* Password validation (coming soon) */
+/* Password must contains */
+.content p {
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 13px;
+    color: black;
+}
+
+.content .requirement-list {
+    margin-top: 10px;
+    padding-left: 13px;
+}
+
+.requirement-list li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.requirement-list li i {
+    width: 20px;
+    color: #aaa;
+    font-size: 0.6rem;
+}
+
+.requirement-list li.valid i {
+    font-size: 1.2rem;
+    color: #4285F4;
+}
+.requirement-list li span {
+    margin-left: 12px;
+    color: #333;
+}
+.requirement-list li.valid span {
+    color: #999;
+}
+
+/* Submit button styles */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 30px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #004c99;
+}
+
+/* Footer link styles */
+.form-footer {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-size: 1em;
+    color: #777;
+}
+
+/* Login here */
+.form-footer a {
+    margin-left: 10px;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 30px;
+        width: 90%;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+}
+
+/* Footer styles */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #e0e0e0;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Add these new styles for phone input group */
+.phone-input-group {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.phone-input-group select {
+    width: 200px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.phone-input-group input {
+    flex: 1;
+    margin: 0 !important;
+}
+
+.phone-input-group select:focus {
+    border-color: #3498db;
+    border-width: 2px;
+}
+
+/* Update responsive styles */
+@media (max-width: 480px) {
+    .phone-input-group {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .phone-input-group select {
+        width: 100%;
+    }
+}
+
+/* Password input group styles */
+.password-input-group {
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.password-input-group input {
+    margin: 0 !important;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 5px;
+    color: #666;
+}
+
+.password-toggle:hover {
+    color: #0066cc;
+}
+
+.password-toggle i {
+    font-size: 1.2em;
+}
+
+/* Specialization select styles */
+select[name="specialization"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+    color: #333;
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+}
+
+select[name="specialization"]:focus {
+    border-color: #3498db;
+    border-width: 2px;
+}
+
+select[name="specialization"] option {
+    color: #333;
+    padding: 10px;
+}
+
+select[name="specialization"] option:first-child {
+    color: #666;
+}
+
+/* Hover effect */
+select[name="specialization"]:hover {
+    border-color: #3498db;
+}
+
+/* For Firefox */
+select[name="specialization"] {
+    -moz-padding-start: calc(10px - 3px);
+}
+
+/* Update the placeholder color for specialization select */
+select[name="specialization"] option[value=""][disabled] {
+    color: #666;
+}
+
+/* For Firefox */
+select[name="specialization"] {
+    color: #666;
+}
+
+/* Change color when an option is selected */
+select[name="specialization"]:not([value=""]) {
+    color: #333;
+}

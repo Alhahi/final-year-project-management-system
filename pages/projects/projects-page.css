@@ -1,0 +1,906 @@
+/* Google fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: black;
+}
+
+#projectProposals {
+    padding-top: 70px; /* Add padding to account for fixed navbar */
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #0951a3;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    position: relative;
+    width: 100%;
+}
+
+.logo-section img {
+    height: 100px;
+    width: auto;
+    margin-left: -90px;
+    margin-top: 5px;
+}
+
+.nav-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    align-items: center;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    transform: scale(1.15);
+    background-color: whitesmoke;
+    color: #0951a3;
+}
+
+.nav-link.active {
+    background-color: whitesmoke;
+    color: #0951a3;
+}
+
+h2, h3, h4 {
+    margin: 0;
+    padding: 10px 0;
+    padding-left: 20px;
+    color: black;
+}
+
+/* Header Section */
+.projects-header {
+    text-align: center;
+    background-color: #0066cc;
+    color: white;
+    padding: 20px;
+}
+
+.projects-header h2 {
+    margin: 0;
+}
+
+/* Status Overview */
+.project-status-overview {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+    padding: 30px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Current Project, Supervisor, Project Status */
+.status-card {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    gap: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Current Project, Supervisor, Project Status */
+.status-card h3 {
+    color: #0066cc;
+    padding-left: 0px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Action Cards */
+.project-actions-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.action-card h4 {
+    padding-left: 0px;
+    font-size: 1.3rem;
+    margin: 15px 0;
+    color: #333;
+}
+
+.action-card {
+    flex: 1 1 calc(33.333% - 40px);
+    min-width: 300px;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin: 10px;
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.action-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 15px 0;
+    min-height: 48px;
+}
+
+.action-icon {
+    background: none;
+    border: none;
+    color: #e92135;
+    cursor: pointer;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.action-icon i {
+    font-size: 2.5rem;
+}
+
+.action-btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.action-btn:hover {
+    background-color: #004c99;
+    transform: scale(1.05);
+}
+
+/* Available Projects */
+.available-projects {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filter-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter-controls select, 
+.filter-controls input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Timeline View */
+.project-timeline-view {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.timeline-phases {
+    flex: 2;
+    border-right: 1px solid #ddd;
+    padding-right: 20px;
+}
+
+.timeline-milestones {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.phase {
+    margin-bottom: 20px;
+}
+
+.phase-header h4 {
+    margin-bottom: 5px;
+}
+
+.phase-progress {
+    position: relative;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.phase-progress .progress-bar {
+    height: 100%;
+    background-color: #0066cc;
+}
+
+.status {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status.completed {
+    color: #28a745;
+}
+
+.status.in-progress {
+    color: #ffc107;
+}
+
+.status.pending {
+    color: #dc3545;
+}
+
+/* Submission Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: #1a237e;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close:hover {
+    color: #333;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.submit-btn,
+.cancel-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.cancel-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+.cancel-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Submit Project */
+.submit-project-btn {
+    margin-top: 10px;
+    margin-right: 50px;
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-project-btn:hover {
+    background-color: #004c99;
+    transform: scale(1.15);
+}
+
+/* Project Planning */
+.add-plan-btn {
+    margin-top: 10px;
+    margin-right: 50px;
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-plan-btn:hover {
+    background-color: #004c99;
+    transform: scale(1.15);
+}
+
+/* Presentation Slot Booking */
+.book-slot-btn {
+    margin-top: 10px;
+    margin-right: 50px;
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.book-slot-btn:hover {
+    background-color: #004c99;
+    transform: scale(1.15);
+}
+
+/* Project Submissions & Project Planning Table*/
+.submission-table, .plan-table {
+    width: 97%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+
+}
+
+.submission-table th, .plan-table th,
+.submission-table td, .plan-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.submission-table th, .plan-table th {
+    background-color: #0066cc;
+    color: white;
+    font-weight: bold;
+}
+
+.submission-table tbody tr:nth-child(even),
+.plan-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Presentation Slot Booking Table */
+.booking-table {
+    width: 97%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    table-layout: auto;
+}
+
+.booking-table th,
+.booking-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.booking-table th {
+    background-color: #0066cc;
+    color: white;
+    font-weight: bold;
+}
+
+.booking-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.booking-table td:nth-child(5) {
+    min-width: 150px;
+    text-align: left;
+}
+
+/* Make status badges consistent */
+.status-badge {
+    padding: 8px 16px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-block;
+    text-align: center;
+    min-width: 100px;
+}
+
+.status-badge.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status-badge.active,
+.status-badge.confirmed,
+.status-badge.completed {
+    background: #d4edda;
+    color: #155724;
+}
+
+/* Add hover effect */
+.booking-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Make table cells with actions more compact */
+.plan-table td:last-child,
+.proposal-table td:last-child,
+.booking-table td:last-child {
+    padding: 8px 16px;
+    white-space: nowrap;
+    width: 1%;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #e0e0e0;
+}
+
+footer p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.booking-table td:nth-child(1),
+.booking-table td:nth-child(2) {
+    width: 13%;
+}
+
+.booking-table td:nth-child(3) {
+    width: 18%;
+}
+
+.booking-table td:nth-child(4) {
+    width: 28%;
+}
+
+.booking-table td:nth-child(5) {
+    width: 18%;
+}
+
+/* Update/Add these styles */
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.panel-header h3 {
+    color: #2c3e50;
+    font-size: 1.25rem;
+    margin: 0; /* Remove default margin */
+}
+
+.submit-project-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-project-btn:hover {
+    background: #0052a3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+}
+
+.submit-project-btn i {
+    font-size: 0.9rem;
+}
+
+/* Presentation Slots Section */
+.presentation-slots-section {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.presentation-slots-section h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.standard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: white;
+}
+
+.standard-table th,
+.standard-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.standard-table th {
+    background-color: #0066cc;
+    color: white;
+    font-weight: 600;
+}
+
+.standard-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.standard-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.book-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.book-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.book-button i {
+    font-size: 1rem;
+}
+
+.alert {
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.alert-info {
+    background-color: #cce5ff;
+    border: 1px solid #b8daff;
+    color: #004085;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+}
+
+/* Booked Slot Card Styles */
+.booked-slot-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 600px;
+    border: 1px solid #e0e0e0;
+    border-left: 5px solid #28a745;
+}
+
+.booked-slot-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.booked-slot-header i {
+    font-size: 28px;
+    color: #28a745;
+    background: #e8f5e9;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.booked-slot-header h4 {
+    margin: 0;
+    color: #1a237e;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.booked-slot-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+    background: #f0f4f8;
+    transform: translateX(5px);
+}
+
+.detail-item i {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0066cc;
+    font-size: 1.1rem;
+    margin-right: 15px;
+}
+
+.detail-item span {
+    color: #666;
+    width: 100px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.detail-item strong {
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1.05rem;
+    flex: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .booked-slot-card {
+        margin: 15px;
+        padding: 20px;
+    }
+    
+    .booked-slot-header h4 {
+        font-size: 1.2rem;
+    }
+    
+    .detail-item {
+        padding: 10px;
+    }
+    
+    .detail-item span {
+        width: 80px;
+        font-size: 0.9rem;
+    }
+    
+    .detail-item strong {
+        font-size: 1rem;
+    }
+}
+
+.booked-slot-section {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.section-header i {
+    font-size: 24px;
+    color: #28a745;
+    background: #e8f5e9;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.section-header h4 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Update existing status-badge styles */
+.status-badge.confirmed {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Update the section class */
+.section {
+    padding: 90px 20px 20px 20px; /* Increased top padding to 90px */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* You can also add this class for better spacing */
+.page-header {
+    margin-bottom: 30px;
+}
+
+.page-header h2 {
+    color: #0066cc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .action-card {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .action-card {
+        flex: 1 1 100%;
+        max-width: none;
+    }
+    
+    .project-actions-container {
+        padding: 10px;
+    }
+}

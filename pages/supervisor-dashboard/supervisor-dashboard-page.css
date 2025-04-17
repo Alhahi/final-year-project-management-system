@@ -1,0 +1,702 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Sections */
+.section {
+    padding: 2.5rem;
+    background-color: #f5f7fa;
+    min-height: calc(100vh - 70px);
+}
+
+h2 {
+    color: #0951a3;
+    margin-bottom: 2.5rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: #0951a3;
+    border-radius: 2px;
+}
+
+/* Dashboard Grid Enhancement */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+/* Dashboard Cards Enhancement */
+.dashboard-card {
+    padding: 2.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Project Status Overview */
+.project-status-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.status-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Timeline */
+.project-timeline h3 {
+    font-size: 1.5rem;
+    color: #000000;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.progress-chart {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+/* Project Evaluation and Announcement Management button spacing */
+.evaluation-actions,
+.announcement-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0.5rem 0;
+}
+
+/* Individual action button */
+.evaluation-actions [class*="-btn"],
+.announcement-actions [class*="-btn"] {
+    flex: 0 1 auto;
+    justify-content: center;
+}
+
+:root {
+    --primary-color: #2563eb;
+    --background-color: #f0f7ff;
+    --text-primary: #333333;
+    --accent-color: #3b82f6;
+    --primary-light: #f5f5f5;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --info-color: #06b6d4;
+}
+
+/* Dashboard Stats */
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    background: white;
+    background: linear-gradient(135deg, #fff, #f0f7ff);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(37, 99, 235, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add subtle animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.stat-card:hover {
+    animation: pulse 1.5s infinite;
+}
+
+.stat-card h3 {
+    color: #444;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+}
+
+/* Supervisor Actions */
+.supervisor-actions {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* Action Panel */
+.action-panel {
+    background: linear-gradient(to bottom right, #fff, #f8fafc);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(37, 99, 235, 0.1);
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.panel-header {
+    background: linear-gradient(to right, #f0f7ff, #fff);
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #eef2f7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.panel-header h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Project List */
+.project-list {
+    padding: 1.5rem;
+}
+
+.project-item {
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.project-item:hover {
+    background: linear-gradient(to right, #f0f7ff, #fff);
+    border-left: 4px solid var(--primary-color);
+    transform: translateX(5px);
+}
+
+/* View Details Button */
+.view-details-btn {
+    background-color: #0066cc;
+    color: white;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-details-btn:hover {
+    background-color: #004c99;
+    transform: scale(1.15);
+}
+
+/* Tables */
+.plan-table, .proposal-table, .booking-table, .submission-table, .evaluation-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    border: 2px solid #0066cc;
+}
+
+.plan-table th,
+.plan-table td,
+.proposal-table th,
+.proposal-table td,
+.booking-table th,
+.booking-table td,
+.submission-table th,
+.submission-table td,
+.evaluation-table th,
+.evaluation-table td {
+    border: 2px solid #ddd;
+    padding: 20px 20px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.plan-table th,
+.proposal-table th,
+.booking-table th,
+.submission-table th,
+.evaluation-table th {
+    background-color: #0066cc;
+    color: white;
+    font-weight: bold;
+    padding: 20px 40px;
+    font-size: 1.1rem;
+}
+
+.plan-table tbody tr:nth-child(even),
+.proposal-table tbody tr:nth-child(even),
+.booking-table tbody tr:nth-child(even),
+.submission-table tbody tr:nth-child(even),
+.evaluation-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Button Styles */
+.cancel-btn, .save-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    border: 1px solid #ddd;
+    background: white;
+}
+
+.save-btn {
+    border: none;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+    color: white;
+}
+
+/* Booking Status */
+.booking-status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.booking-status.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.booking-status.approved {
+    background: #d4edda;
+    color: #155724;
+}
+
+.booking-status.rejected {
+    background: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+/* Action Icons */
+.action-icon {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.action-icon:hover {
+    background: rgba(37, 99, 235, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Booking Actions */
+.booking-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+}
+
+/* Submit New Proposal Button */
+.add-proposal-btn {
+    background: #0066cc;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.add-proposal-btn:hover {
+    background: #004c99;
+}
+
+/* Add spacing between tables */
+.table-section {
+    margin-bottom: 2.5rem;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #e0e0e0;
+}
+
+footer p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* File chips styling */
+.submission-files {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.file-chip {
+    display: inline-flex;
+    align-items: center;
+    background: #f0f7ff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    gap: 4px;
+    border: 1px solid #e0e7ff;
+}
+
+.file-chip i {
+    color: #e92135;
+}
+
+/* Adjust table cell for files */
+.submission-table td {
+    vertical-align: center;
+    min-width: 200px; /* Ensure enough space for file chips */
+}
+
+.submission-table td .submission-files {
+    max-width: 500px; /* Limit width to force wrapping */
+}
+
+/* Rejection Modal Styles */
+#rejectReasonModal .modal-content {
+    max-width: 500px;
+}
+
+/* Adjust column widths in submission-table */
+.submission-table {
+    table-layout: fixed; /* Ensure table respects specified column widths */
+    width: 100%;
+}
+
+.submission-table th:nth-child(1), /* Student column */
+.submission-table td:nth-child(1) {
+    width: 11%;  /* Column Width */
+}
+
+.submission-table th:nth-child(3), /* Submission Date column */
+.submission-table td:nth-child(3) {
+    width: 13%; /* Column Width */
+}
+.submission-table th:nth-child(4), /* Files column */
+.submission-table td:nth-child(4) {
+    width: 30%; /* Column Width */
+}
+
+.submission-table th:nth-child(5), /* Status column */
+.submission-table td:nth-child(5) {
+    width: 12%; /* Column Width */
+}
+
+.submission-table th:nth-child(6), /* Actions column */
+.submission-table td:nth-child(6) {
+    width: 11%;/* Column Width */
+}
+
+/* Presentation Slot Management Table */
+.booking-table th:nth-child(7), /* Actions column */
+.booking-table td:nth-child(7) {
+    width: 13%; /* Column Width */
+}
+
+#rejectReason {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+#rejectReason:focus {
+    border-color: #0066cc;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.1);
+}
+
+/* Update booking status styles */
+.booking-status.rejected {
+    background: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+/* Style for required field */
+.form-group label::after {
+    content: '*';
+    color: #dc2626;
+    margin-left: 4px;
+}
+
+/* Error state for empty textarea */
+#rejectReason:invalid {
+    border-color: #dc2626;
+}
+
+/* Status Badge Styles */
+.status-badge, .booking-status {
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Pending Status */
+.status-badge.pending, .booking-status.pending {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+/* Active/Approved Status */
+.status-badge.active, .booking-status.approved, .status-badge.approved {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+/* Rejected Status */
+.status-badge.rejected, .booking-status.rejected {
+    background: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+/* Under Review Status */
+.status-badge.under-review {
+    background: #e0f2fe;
+    color: #0369a1;
+    border: 1px solid #bae6fd;
+}
+
+/* Completed Status */
+.status-badge.completed {
+    background: #e0e7ff;
+    color: #4338ca;
+    border: 1px solid #c7d2fe;
+}
+
+/* In Progress Status */
+.status-badge.in-progress {
+    background: #f3e8ff;
+    color: #6b21a8;
+    border: 1px solid #e9d5ff;
+}
+
+/* Overdue/Late Status */
+.status-badge.overdue, .status-badge.late {
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fee2e2;
+}
+
+/* Cancelled Status */
+.status-badge.cancelled {
+    background: #f3f4f6;
+    color: #4b5563;
+    border: 1px solid #e5e7eb;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.manage-btn {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.manage-btn:hover {
+    background-color: #e9ecef;
+    border-color: #ccc;
+}
+
+.manage-btn i {
+    font-size: 14px;
+}
+
+.alert {
+    padding: 15px;
+    margin: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.alert-error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.back-button {
+    margin: 1rem 0 0 2rem;
+}
+
+.back-button a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #1a237e;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.back-button a:hover {
+    background: rgba(26, 35, 126, 0.1);
+}
+
+.back-button i {
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Adjust for mobile */
+@media (max-width: 768px) {
+    .back-button {
+        margin: 1rem 0 0 1rem;
+    }
+} 

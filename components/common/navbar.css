@@ -1,0 +1,328 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #F7F9FC;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Top Navigation Bar */
+.navbar {
+    background-color: #0951a3;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    position: relative;
+}
+
+/* Update navbar container */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    position: relative;
+    width: 100%; /* Ensure full width */
+}
+
+.logo-section img {
+    height: 100px;
+    width: auto;
+}
+
+/* Update nav section */
+.nav-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 2rem; /* Add padding to nav section instead */
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    align-items: center;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    transform: scale(1.15);
+    background-color: whitesmoke;
+    color: var(--text-primary);
+    border-radius: 30px;
+}
+
+.nav-link.active {
+    background-color: #FF8A8A;
+    color: var(--text-primary);
+    border-radius: 30px;
+}
+
+/* Media query for responsive navigation */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 1rem;
+    }
+
+    .profile-menu {
+        position: static;
+        padding-right: 0;
+    }
+
+    .nav-section {
+        justify-content: center;
+        padding-left: 0;
+    }
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Base button styles with higher specificity */
+.navbar .nav-container [class*="-btn"],
+.section [class*="-btn"],
+.action-panel [class*="-btn"],
+.modal [class*="-btn"] {
+    background-color: #e92135;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(78, 205, 196, 0.2);
+    text-decoration: none;
+}
+
+/* Hover states */
+.navbar .nav-container [class*="-btn"]:hover,
+.section [class*="-btn"]:hover,
+.action-panel [class*="-btn"]:hover,
+.modal [class*="-btn"]:hover {
+    background-color: #e92135;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(78, 205, 196, 0.3);
+    color: white;
+}
+
+/* Button icons */
+.navbar .nav-container [class*="-btn"] i,
+.section [class*="-btn"] i,
+.action-panel [class*="-btn"] i,
+.modal [class*="-btn"] i {
+    color: white;
+    font-size: 1.1rem;
+}
+
+/* Profile menu specific styles */
+.navbar .profile-menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding-right: 0.5rem;
+    z-index: 1000;
+}
+
+/* General Styles */
+.profile-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-btn {
+    background-color: #0066cc; /* Primary color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s;
+}
+
+.profile-btn:hover {
+    background-color: #4ca6ff; /* Secondary color */
+}
+
+.profile-btn i {
+    font-size: 20px;
+}
+
+/* Dropdown Menu */
+.profile-dropdown {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 80%; /* Position below the button */
+    right: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.profile-dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.profile-dropdown a:hover {
+    background-color: #f4f4f4; /* Neutral color */
+    color: #0066cc; /* Primary color */
+}
+
+/* Show Dropdown on Click */
+.profile-dropdown.show {
+    display: block;
+}
+
+/* Style for the Dropdown Button */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-btn:hover {
+    background-color: #004c99;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.dropdown-item {
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: left;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu when the button is clicked */
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+/* Style for the Profile Button */
+.profile-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Style for the Profile Dropdown */
+.profile-dropdown {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Dropdown is visible when 'active' class is added */
+.profile-dropdown.active {
+    display: block;
+}
+
+/* Style for dropdown links */
+.profile-dropdown a {
+    background-color: white;
+    padding: 10px 20px;
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for dropdown items */
+.profile-dropdown a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Icon styles (for consistency) */
+.profile-dropdown i {
+    margin-right: 8px;
+}

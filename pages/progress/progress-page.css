@@ -1,0 +1,425 @@
+/* Google fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: black;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #0951a3;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    position: relative;
+    width: 100%;
+}
+
+.logo-section img {
+    height: 100px;
+    width: auto;
+    margin-left: -90px;
+    margin-top: 5px;
+}
+
+.nav-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    align-items: center;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    transform: scale(1.15);
+    background-color: whitesmoke;
+    color: #0951a3;
+}
+
+.nav-link.active {
+    background-color: whitesmoke;
+    color: #0951a3;
+}
+
+/* Section Styles */
+.section {
+    padding: 0.2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    padding-top: 80px;
+}
+
+.section h2 {
+    font-size: 1.5rem;
+    color: #0066cc;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Progress Stats */
+.progress-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 0 1.5rem;
+}
+
+.stat-card {
+    background: white;
+    background: linear-gradient(135deg, #fff, #f0f7ff);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.1);
+    border-left: 4px solid var(--primary-color);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+/* Button Styles */
+.save-btn {
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+}
+
+.cancel-btn {
+    border: 1px solid #ddd;
+    background: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.stat-subtitle {
+    color: black;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+}
+
+/* Project Timeline Header Text */
+.project-timeline h3{
+    font-size: 1.5rem;
+    color: #0066cc;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Weekly Goals Styles */
+.weekly-goals {
+    background: linear-gradient(to bottom right, #fff, #f8fafc);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+.section-header {
+    background: linear-gradient(to right, #f0f7ff, #fff);
+    padding: 1.2rem;
+    border-bottom: 1px solid #eef2f7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Add New Goal Button */
+.add-goal-btn {
+    background: #0066cc;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+}
+
+.add-goal-btn:hover {
+    background-color: #004c99;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* Current Week Goals Header Text */
+.current-week h4{
+    margin-left: 1.2rem;
+}
+
+/* Goal Items */
+.goal-item {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    display: grid;
+    gap: 0.5rem;
+    border: 1px solid #eef2f7;
+    transition: all 0.3s ease;
+}
+
+.goal-item:hover {
+    transform: translateX(5px);
+    border-left: 4px solid var(--primary-color);
+}
+
+/* Status Badges */
+.goal-priority {
+    padding: 0.3rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* High Priority Status */
+.priority-high {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* Med Priority Status */
+.priority-medium {
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* Low Priority Status */
+.priority-low {
+    background: #d4edda;
+    color: #155724;
+}
+
+/* Add CSS Variables */
+:root {
+    --primary-color: #2563eb;
+    --background-color: #f0f7ff;
+    --text-primary: #333333;
+    --accent-color: #3b82f6;
+    --high-color: #ef4444;
+    --warning-color: #f59e0b;
+    --completed-color: #10b981;
+    --info-color: #06b6d4;
+}
+
+/* Goal Item Enhancements */
+.goal-item {
+    background: white;
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    
+}
+
+/* High priority status card */
+.high {
+    border-left: 4px solid var(--high-color);
+}
+
+/* Med priority status card */
+.medium {
+    border-left: 4px solid var(--warning-color);
+}
+
+.goal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.goal-header h5 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.goal-description {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.goal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.goal-deadline i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* Completed status card */
+.completed {
+    background: #f8fafc;
+    border-left: 4px solid var(--completed-color);
+}
+
+/* Completed Status */
+.completed .goal-priority {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+/* Timeline Container */
+.timeline-container {
+    margin: 2rem 1.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #e0e0e0;
+}
+
+footer p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Edit Button */
+.edit-goal-btn {
+    background-color: #f0ad4e;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-goal-btn:hover {
+    background-color: #ec971f;
+}
+
+/* Delete Button */
+.delete-goal-btn {
+    background-color: #d9534f;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-goal-btn:hover {
+    background-color: #c9302c;
+}

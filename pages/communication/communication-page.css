@@ -1,0 +1,350 @@
+/* Google fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: black;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #0951a3;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    position: relative;
+    width: 100%;
+}
+
+.logo-section img {
+    height: 100px;
+    width: auto;
+    margin-left: -90px;
+    margin-top: 5px;
+}
+
+.nav-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    align-items: center;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    transform: scale(1.15);
+    background-color: whitesmoke;
+    color: #0951a3;
+}
+
+.nav-link.active {
+    background-color: whitesmoke;
+    color: #0951a3;
+}
+
+/* Communication Styles */
+.communication-container {
+    padding: 1.5rem;
+}
+
+.comm-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    background: white;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    background: #0066cc;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.tab-btn.active {
+    background: #004c99;
+    color: white;
+}
+
+.tab-btn i {
+    color: inherit;
+}
+
+.chat-container {
+    display: flex; /* Ensures that the sidebar and main chat area appear side by side */
+    height: 100%;
+}
+
+/* Styling for chat-sidebar */
+.chat-sidebar {
+    width: 250px; /* Set a fixed width for the sidebar */
+    background-color: #f4f4f4; /* Light background for the sidebar */
+    padding: 10px;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+    overflow-y: auto; /* Enables scrolling if there are many users */
+}
+
+
+.chat-header {
+    padding: 1.2rem;
+    border-bottom: 1px solid #e2e8f0;
+    background: white;
+}
+
+.chat-header h3 {
+    color: #1e293b;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Basic styling for the search box and dropdown */
+.search-box {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    border: 1px solid #ccc;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1;
+    margin-top: 5px;
+}
+
+.user-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.user-item.active {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.user-item:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* Ensure the dropdown shows up when the search box is focused */
+.search-box:focus + .dropdown-content {
+    display: block;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.user-name {
+    color: #1e293b;
+    font-weight: 500;
+}
+
+.user-role {
+    color: #64748b;
+    font-size: 0.8rem;
+}
+
+.chat-main {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    height: 100%; /* Full height of parent container */
+    min-height: 600px;
+}
+
+.chat-messages {
+    flex: 1; /* Takes up all the available space */
+    overflow-y: auto; /* Allows scrolling when there are too many messages */
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.message {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.message.received {
+    align-self: flex-start;
+}
+
+.message.sent {
+    align-self: flex-end;
+}
+
+.message-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.message.sent .message-info {
+    justify-content: flex-end;
+}
+
+.sender {
+    color: #1e293b;
+    font-weight: 500;
+}
+
+.time {
+    color: #64748b;
+}
+
+.message-content {
+    padding: 0.8rem 1.2rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.message.received .message-content {
+    background: #f1f5f9;
+    color: #1e293b;
+    border-bottom-left-radius: 4px;
+}
+
+.message.sent .message-content {
+    background: var(--primary-color);
+    color: rgb(0, 0, 0);
+    border-bottom-right-radius: 4px;
+}
+
+/* Basic styling for chat-container */
+.chat-container {
+    display: flex; /* Ensures that the sidebar and main chat area appear side by side */
+    height: 100%;
+}
+
+/* Styling for chat-sidebar */
+.chat-sidebar {
+    width: 250px; /* Set a fixed width for the sidebar */
+    background-color: #f4f4f4; /* Light background for the sidebar */
+    padding: 10px;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+    overflow-y: auto; /* Enables scrolling if there are many users */
+}
+
+/* Styling for each user item in the list */
+.user-item {
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Change the background when hovering over a user item */
+.user-item:hover {
+    background-color: #ddd;
+}
+
+/* Active user item styling */
+.user-item.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Styling for chat-main */
+.chat-main {
+    flex-grow: 1; /* The main chat area will take up remaining space */
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for chat-messages */
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    max-height: 600px;
+}
+
+/* Styling for chat input area */
+.chat-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.send-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.send-btn i {
+    font-size: 18px;
+}

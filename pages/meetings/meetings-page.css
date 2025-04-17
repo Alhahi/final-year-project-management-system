@@ -1,0 +1,591 @@
+/* Google fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: black;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #0951a3;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    position: relative;
+    width: 100%;
+}
+
+.logo-section img {
+    height: 100px;
+    width: auto;
+    margin-left: -90px;
+    margin-top: 5px;
+}
+
+.nav-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    align-items: center;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    transform: scale(1.15);
+    background-color: whitesmoke;
+    color: #0951a3;
+}
+
+.nav-link.active {
+    background-color: whitesmoke;
+    color: #0951a3;
+}
+
+h2, h3 {
+    margin: 0;
+    padding: 10px 0;
+    color: #0066cc; /* Primary color */
+}
+
+/* Meetings Management Section Styles */
+.section {
+    padding: 20px;
+    margin: 20px auto;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 1200px;
+    margin-top: 100px;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 28px;
+    border-bottom: 2px solid #0066cc; /* Primary color */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Meetings Management */
+.meetings-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.upcoming-meetings, .meeting-logs {
+    flex: 1 1 calc(50% - 20px);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background: #f4f4f4; /* Neutral color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Upcoming Meetings, Meeting Logs (Header) */
+.upcoming-meetings h3, .meeting-logs h3 {
+    margin-bottom: 20px;
+    color: #0066cc; /* Secondary color */
+    font-size: 20px;
+}
+
+/* Buttons */
+.schedule-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #0066cc; /* Primary color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 20px;
+}
+
+.schedule-btn i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.schedule-btn:hover {
+    background-color: #4ca6ff; /* Secondary color */
+    transform: translateY(-2px);
+}
+
+/* Meetings List */
+.meetings-list, .logs-list {
+    background: white;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+.meetings-list::-webkit-scrollbar, .logs-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.meetings-list::-webkit-scrollbar-thumb, .logs-list::-webkit-scrollbar-thumb {
+    background: #4ca6ff; /* Secondary color */
+    border-radius: 10px;
+}
+
+.meetings-list::-webkit-scrollbar-track, .logs-list::-webkit-scrollbar-track {
+    background: #f4f4f4; /* Neutral color */
+}
+
+/* Meeting Item */
+.meeting-item {
+    padding: 1.2rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.meeting-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.meeting-info {
+    flex: 1;
+}
+
+.meeting-info h4 {
+    color: #1e293b;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+}
+
+.meeting-info p {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.meeting-info i {
+    color: #e92135;
+    width: 16px;
+}
+
+.meeting-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.8rem;
+}
+
+/* Meeting Status Styles */
+.meeting-status {
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.meeting-status.upcoming {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+.meeting-status.scheduled {
+    background-color: #f0fdf4;
+    color: #166534;
+}
+
+.meeting-status.completed {
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+.meeting-status.cancelled {
+    background-color: #fef2f2;
+    color: #991b1b;
+}
+
+/* Action Buttons */
+.action-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.join-btn {
+    background-color: #0066cc;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.join-btn:hover {
+    background-color: #004c99;
+    transform: scale(1.15);
+}
+
+.reschedule-btn {
+    background-color: #0066cc;
+    color: white;
+    border: 1px solid #e2e8f0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.reschedule-btn:hover {
+    background-color: #004c99;
+    transform: scale(1.15);
+}
+
+.view-notes-btn {
+    background-color: #0066cc;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-notes-btn:hover {
+    background-color: #004c99;
+    transform: scale(1.15);
+}
+
+/* Schedule Button Enhancement */
+.schedule-btn {
+    background: #0066cc;
+    font-size: 1rem;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.schedule-btn:hover {
+    background: #004c99;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.schedule-btn i {
+    font-size: 1rem;
+}
+
+/* Completed Meeting Item */
+.meeting-item.completed {
+    background-color: #f8fafc;
+}
+
+/* Cancelled Meeting Item */
+.meeting-item.cancelled {
+    background-color: #fef2f2;
+    border-color: #fecaca;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #e0e0e0;
+    width: 100%
+}
+
+footer p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Modal Overlay */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000; /* Ensures it appears above all other content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+}
+
+/* Modal Content */
+.modal-content {
+    background: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: slide-in 0.3s ease-out;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+/* Panel Header */
+.panel-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #444;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 10px;
+}
+
+/* Form Styles */
+.email-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.email-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.email-form input,
+.email-form select,
+.email-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.email-form input:focus,
+.email-form select:focus,
+.email-form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* File Input */
+.email-form input[type="file"] {
+    border: none;
+    padding: 0;
+}
+
+.email-form small {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Submit Button */
+.submit-btn {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #0056b3;
+}
+
+/* Open Modal Button */
+.open-modal-btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #fff;
+    background: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.open-modal-btn:hover {
+    background: #218838;
+}
+
+/* Animations */
+@keyframes slide-in {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 40px;
+    border-radius: 8px;
+    width: 50%;
+    min-width: 400px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.modal-header .close {
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+}
+
+.modal-header .close:hover {
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.datetime-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.datetime-inputs input {
+    flex: 1;
+}
+
+.modal-footer {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    text-align: right;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+    color: #333;
+}
+
+.cancel-btn:hover {
+    background-color: #bbb;
+}
+
+/* Add this in meetings-page.css */
+@media (max-width: 768px) {
+    .meetings-container {
+      flex-direction: column;
+    }
+    .meeting-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
